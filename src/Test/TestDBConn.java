@@ -50,7 +50,7 @@ public class TestDBConn extends HttpServlet {
 			Connection myConn = DriverManager.getConnection(jdbcURL,userAndPw,userAndPw);
 			
 			out.println("SUCCESS!!!");
-			
+			out.println("Now close the connection");
 			myConn.close();
 		}catch(Exception e){
 			e.printStackTrace();
