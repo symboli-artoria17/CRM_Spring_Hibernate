@@ -19,7 +19,7 @@
  	1. Create Database
 	2. Define database dataSource/Connection pool
 		In the spring bean configuration file, create a bean whose class is ComboPooledDataSource(From c3p0) for  connection pool and set the properties.
-	3. Setup Hibernate session Factory
+	3. Setup Hibernate session Factory (Spring ORM)
 		same as above. Remember to ref the data source created in step 2.
 	4. Setup Hibernate transaction manager
 		same as above, ref SessionFactory
