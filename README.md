@@ -31,4 +31,6 @@
 	
 	A: Right click project -- Properties -- Deploy Assembly -- Make sure Maven is there. If not, add one.
 	
-		 
+**  Q: Controller code doesn't work?
+
+	A: Maybe a caching issue. Restart tomcat, clean the project, it might be fixed
