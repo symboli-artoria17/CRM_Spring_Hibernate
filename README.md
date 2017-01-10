@@ -34,7 +34,7 @@
 ### 3. Test Controller 
 	1. Create a simple controller class. Remember, the scan package in beans.xml should be the right one. Also the view resolver.
 	2. Make a landing page for the contorller
-	3  . Test the controller. (with Annotation: Controller, RequestMapping...)
+	3. Test the controller. (with Annotation: Controller, RequestMapping...)
 
 ## FAQ:
 **	Q: Cannot resolve 'javax servlet'... blah blah blah?**
