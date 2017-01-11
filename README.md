@@ -36,6 +36,33 @@
 	2. Make a landing page for the contorller
 	3. Test the controller. (with Annotation: Controller, RequestMapping...)
 
+### 4. List Customers Function
+
+	1. Create Customer.java entity class (the class mapped to database table)
+		- To configure the scanning package, set the property packagesToScan in SessionFactoryBean:
+		  Open bean configuration file (here is beans.xml)
+		  Configure the sessionFactory bean:
+		  <property name="packagesToScan" value="crm.entity">
+	2. Create CustomerDAO.java (interface) and CustomerDAOImpl.java for database access
+		Define DAO Interface
+		Define DAO Implementation
+		@Transactional: Spring provides an @Transanctional annotation, automatically begin and end transaction
+		Just put it before your method.
+		No need extra code, like session.beginTransaction(), session.getTransaction().commit();
+		
+		@Repository
+		Specialized Annotation for DAO
+		Spring will automatically register the DAO implementation
+		Spring also provides translation of any JDBC related exceptions
+		
+	3. Create CustomerController.java
+		update the controller 
+		inject the DAO with @Autowired
+		
+	4. Create JSP page: list-customers.jsp
+		import JSTL
+		<% taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
+		
 ## FAQ:
 **	Q: Cannot resolve 'javax servlet'... blah blah blah?**
 	

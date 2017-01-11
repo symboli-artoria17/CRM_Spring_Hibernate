@@ -8,6 +8,6 @@ import org.springframework.web.bind.annotation.RequestMapping;
 public class Welcome {
 	@RequestMapping("/")
 	public String Home(){
-		return "list-customer";
+		return "Welcome";
 	}
 }
