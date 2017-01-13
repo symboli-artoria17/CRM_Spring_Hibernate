@@ -8,6 +8,32 @@
 <title>List Customers</title>
 </head>
 <body>
-	List Customers - COMING SOON!...
+	<div id="wrapper">
+		<div id="header">
+			<h2>C.R.M.</h2>
+		</div>
+	</div>
+	
+	<div id="container">
+		<div id="content">
+			<!-- add out html table here -->
+			<!--  tr = table rows -->
+			<table>
+				<tr>
+					<th>First Name</th>
+					<th>Last Name</th>
+					<th>Email</th>
+				</tr>
+				<c:forEach var="tempCustomer" items="${customers}">
+					<tr>
+						<td>${tempCustomer.firstName }</td>
+						<td>${tempCustomer.lastName }</td>
+						<td>${tempCustomer.email}</td>
+					</tr>
+				</c:forEach>
+			</table>
+			
+		</div>
+	</div>
 </body>
 </html>
