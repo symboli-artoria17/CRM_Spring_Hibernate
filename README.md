@@ -31,12 +31,12 @@
 		same as above, ref SessionFactory
 	4. Enable configuration of transactional annotations (for time saving, use the annotation)
 
-### 3. Test Controller 
+## 3. Test Controller 
 	1. Create a simple controller class. Remember, the scan package in beans.xml should be the right one. Also the view resolver.
 	2. Make a landing page for the contorller
 	3. Test the controller. (with Annotation: Controller, RequestMapping...)
 
-### 4. List Customers Function
+## 4. List Customers Function
 
 	1. Create Customer.java entity class (the class mapped to database table)
 		- To configure the scanning package, set the property packagesToScan in SessionFactoryBean:
@@ -74,7 +74,7 @@
 		<link type="text/css" rel="stylesheet" href="${pageContext.request.contextPath}/resources/css/style.css"></link>
 	
 	
-### Add the Welcome page
+## 5. Add the Welcome page
 	1. Configure the web.xml to set a welcome page
 		<welcome-file>/WEB-INF/view/Welcome.jsp</welcome-file>
 		under the <welcome-file-list>	
