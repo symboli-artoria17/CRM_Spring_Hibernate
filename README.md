@@ -1,6 +1,6 @@
 # CRM_Spring_Hibernate
 ### This is a simple CRUD project implemented with Spring and Hibernate framework.
-### Check out the Project Architecture in Architecture.PNG
+### Check out the Project Architecture in /ScreenShot/Architecture.PNG
 ## Deployment:
 	- Server: Tomcat 9.0 Library
 	- Database: MySQL 5.7
@@ -80,7 +80,20 @@
 		under the <welcome-file-list>
 		
 		The server will look for the files in <welcome-file-list> from top to down and use the first one it founds
+		
+## 6. Refactor: Change the annotation:
 	
+	GetMapping & PostMapping 
+	
+	change the RequestMapping in CustomerController to GetMapping
+
+## 7. Refactor: Add a Service Facade
+	
+	Add a service layer between controller and DAO. Just because in some cases, you need to integrate multiple DAO and pass one integrated data to controller.
+	See /ScreenShot/ServiceFacade.PNG for help.
+	
+	Here, we use @Service annotation to implement a service layer.
+
 ## FAQ:
 **	Q: Cannot resolve 'javax servlet'... blah blah blah?**
 	
