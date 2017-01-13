@@ -1,6 +1,6 @@
 # CRM_Spring_Hibernate
-### This is a simple CRUD project implmented with Spring and Hibernate framework.
-
+### This is a simple CRUD project implemented with Spring and Hibernate framework.
+### Check out the Project Architecture in Architecture.PNG
 ## Deployment:
 	- Server: Tomcat 9.0 Library
 	- Database: MySQL 5.7
@@ -62,7 +62,23 @@
 	4. Create JSP page: list-customers.jsp
 		import JSTL
 		<% taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
+	
+	5. Make it pretty with CSS
+		Configure beans.xml: Add new lines in <beans>
+		<mvc:resources location="/resources/" mapping="/resources/**"></mvc:resources>
+		Attention! You must have that "/" after location="/resources"!
+		location=physical directory name;
+		/resources/** means url mapping ** to recurse subdirectories
 		
+		Add the line below under the <head> of list-customer.jsp
+		<link type="text/css" rel="stylesheet" href="${pageContext.request.contextPath}/resources/css/style.css"></link>
+	
+	
+### Add the Welcome page
+	1. Configure the web.xml to set a welcome page
+		<welcome-file>/WEB-INF/view/Welcome.jsp</welcome-file>
+		under the <welcome-file-list>	
+	
 ## FAQ:
 **	Q: Cannot resolve 'javax servlet'... blah blah blah?**
 	
