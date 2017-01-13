@@ -77,7 +77,9 @@
 ## 5. Add the Welcome page
 	1. Configure the web.xml to set a welcome page
 		<welcome-file>/WEB-INF/view/Welcome.jsp</welcome-file>
-		under the <welcome-file-list>	
+		under the <welcome-file-list>
+		
+		The server will look for the files in <welcome-file-list> from top to down and use the first one it founds
 	
 ## FAQ:
 **	Q: Cannot resolve 'javax servlet'... blah blah blah?**
