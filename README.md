@@ -71,3 +71,7 @@
 **  Q: Controller code doesn't work?
 
 	A: Maybe a caching issue. Restart tomcat, clean the project, it might be fixed
+	
+**  Q: No found beans to inject?
+	
+	A: I guess you need to check the scan-package in beans.xml. Is the class you want Spring to inject included in the packages to scan? Remember the scanning is recursive(scan in the packages and the packages in the package).
