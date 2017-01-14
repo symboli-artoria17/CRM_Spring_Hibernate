@@ -112,6 +112,18 @@
 	Process Form Data
 		- Controller --> Service --> DAO
 
+## 9. Update Customer
+
+	1. Update list-customers.jsp
+		New "Update" link
+	
+	2. Create customer-form.jsp
+		Pre-populate the form 
+		
+	3. Process form data
+		Controller>Service>DAO
+
+
 ## FAQ:
 **	Q: Cannot resolve 'javax servlet'... blah blah blah?**
 	
