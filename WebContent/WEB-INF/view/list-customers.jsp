@@ -6,7 +6,8 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
 <title>List Customers</title>
-	<link type="text/css" rel="stylesheet" href="${pageContext.request.contextPath}/resources/css/style.css"></link>
+<link type="text/css" rel="stylesheet"
+	href="${pageContext.request.contextPath}/resources/css/style.css"></link>
 </head>
 <body>
 	<div id="wrapper">
@@ -17,6 +18,11 @@
 
 	<div id="container">
 		<div id="content">
+			<!-- put new button: Add Customer -->
+
+			<input type="button" value="Add Customer"
+				onclick="window.location.href='showFormForAdd'" class="add-button"></input>
+
 			<!-- add out html table here -->
 			<!--  tr = table rows -->
 			<table>

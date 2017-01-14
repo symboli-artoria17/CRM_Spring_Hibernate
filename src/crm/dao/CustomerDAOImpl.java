@@ -18,7 +18,6 @@ public class CustomerDAOImpl implements CustomerDAO {
 	private SessionFactory sessionFactory; //sessionFactory Bean is configured in beans.xml
 	
 	@Override
-	@Transactional //magic.
 	public List<Customer> getCustomers() {
 		
 		// get the current hibernate session (org.hibernate.Session)

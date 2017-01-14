@@ -50,6 +50,8 @@
 		Just put it before your method.
 		No need extra code, like session.beginTransaction(), session.getTransaction().commit();
 		
+		Attention, when you are injecting a DAO using Autowired, remember, use the interface to create the instance. Say, use CustomerDAO to create customerDAO instead of using CustomerDAOImpl. (Spring will automatically scan for classes that implements the interface and inject it) 
+		
 		@Repository
 		Specialized Annotation for DAO
 		Spring will automatically register the DAO implementation
@@ -93,6 +95,22 @@
 	See /ScreenShot/ServiceFacade.PNG for help.
 	
 	Here, we use @Service annotation to implement a service layer.
+	
+	- Define the service interface
+	- Define Service implementation (Inject the CustomerDAO)
+	- Move @Transactional to before Service Class
+	
+## 8. Add Customer Function
+	
+	Update list-customer.jsp
+		- New "Add Customer" button: (onclick: Call the Spring controller mapping)
+			<input type="button" value="Add Customer" onclick="window.location.href='showFormForAdd'"></input>
+		
+	
+	Create HTML form for new customer
+	
+	Process Form Data
+		- Controller --> Service --> DAO
 
 ## FAQ:
 **	Q: Cannot resolve 'javax servlet'... blah blah blah?**
