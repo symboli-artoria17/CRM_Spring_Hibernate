@@ -115,10 +115,36 @@
 ## 9. Update Customer
 
 	1. Update list-customers.jsp
-		New "Update" link
-	
+		New "Update" link:
+		
+		For each row, create a link that redirect to the update form page with the customer id as parameter:
+		<c:url var="updateLink" value="/customer/showFormForUpdate">
+			<c:param name="customerId" value="${tempCustomer.id}"></c:param>
+		</c:url>
+		
+		And display the link in the table:
+		
+		<td>
+			<a href="${updateLink}">Update</a>
+		</td>
+		
 	2. Create customer-form.jsp
 		Pre-populate the form 
+		
+		The form will be pre-populated without using placeholder because Spring will automatically do that.
+**		We used Spring form in that page, as a result, every time the form is loaded, spring mvc will call the getter method to display attributes. Also, every time submit the form, spring mvc call the setter method.
+		
+		Hidden form field is needed.
+		Since update and add customer are using the same controller. You must make sure the update is not create a new record. 
+		
+		To solve this, there's a method in hibernate called saveOrUpdate. 
+		We'll use it in the DAO impl.
+		
+		Beside, 
+		specify the customer id that you want to update/add. It can be described in hidden field.
+		This is very important because you want to make sure you are dealing with the record without confuse.
+		
+		
 		
 	3. Process form data
 		Controller>Service>DAO

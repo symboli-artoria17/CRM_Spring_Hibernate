@@ -37,8 +37,19 @@ public class CustomerDAOImpl implements CustomerDAO {
 	public void saveCustomer(Customer theCustomer) {
 		// get current hibernate session
 		Session currentSession = sessionFactory.getCurrentSession();
-		// save the customer ... finally LOL
-		currentSession.save(theCustomer);
+		// save the customer ... but maybe update. so instead of using only save or update, here a method that combines these two.
+		
+		// currentSession.save(theCustomer);
+		currentSession.saveOrUpdate(theCustomer);
+	}
+
+	@Override
+	public Customer getCustomer(int theId) {
+		
+		// get the current hiberante session
+		Session currentSession = sessionFactory.getCurrentSession();
+		// now retrieve/read from database using the primary key
+		return currentSession.get(Customer.class, theId);
 	}
 
 }
