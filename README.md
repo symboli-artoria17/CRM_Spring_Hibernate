@@ -144,10 +144,15 @@
 		specify the customer id that you want to update/add. It can be described in hidden field.
 		This is very important because you want to make sure you are dealing with the record without confuse.
 		
-		
-		
 	3. Process form data
 		Controller>Service>DAO
+
+## 10. Delete Customer
+
+	1. Add "Delete" link on JSP
+		- Add Code for prompt user (with JavaScript)
+	2. Add code for "Delete" 
+		controller>service>DAO
 
 
 ## FAQ:
@@ -162,3 +167,35 @@
 **  Q: No found beans to inject?
 	
 	A: I guess you need to check the scan-package in beans.xml. Is the class you want Spring to inject included in the packages to scan? Remember the scanning is recursive(scan in the packages and the packages in the package).
+	
+	
+
+# Some useful resources
+
+**	Spring MVC and AngularJS CRUD
+
+	- http://websystique.com/springmvc/spring-4-mvc-angularjs-crud-application-using-ngresource/
+
+**	Spring MVC Validation
+
+	- https://spring.io/guides/gs/validating-form-input/
+
+**	Spring MVC and File Uploads
+
+	- https://spring.io/guides/gs/uploading-files/
+
+**	Spring RESTful web services
+
+	- https://spring.io/guides/gs/rest-service/
+
+**	Spring Security for Web Apps
+
+	- https://spring.io/guides/gs/securing-web/
+
+**	Spring and Facebook
+
+	- https://spring.io/guides/gs/accessing-facebook/
+
+**	Spring and Twitter
+
+	- https://spring.io/guides/gs/accessing-twitter/
