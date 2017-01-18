@@ -12,7 +12,9 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 
 import crm.entity.Customer;
+import crm.entity.User;
 import crm.service.CustomerService;
+import crm.service.UserService;
 
 @Controller
 @RequestMapping("/customer")
@@ -20,6 +22,9 @@ public class CustomerController {
 	
 	@Autowired
 	private CustomerService customerService;
+	
+	@Autowired
+	private UserService userService;
 	
 	@GetMapping("/list")
 	public String listCustomers(Model theModel){
@@ -71,6 +76,19 @@ public class CustomerController {
 		customerService.deleteCustomer(theId);
 		return "redirect:/customer/list";
 		
+	}
+	
+	@GetMapping("/login")
+	public String getLoginPage(Model theModel){
+		User user = new User();
+		theModel.addAttribute("loginBean",user);
+		return "NewLogin";
+	}
+	
+	@PostMapping("/login")
+	public String validateLogin(@ModelAttribute("loginBean") User user){
+		
+		return userService.isValid(user.getUsername(), user.getPassword())?"redirect:/customer/list":"redirect:/login";
 	}
 	
 }

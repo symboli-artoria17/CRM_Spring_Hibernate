@@ -9,7 +9,11 @@
 <body>
 	<h1>WELCOME TO CRM SYSTEM</h1>
 	<h2>
+		Click <a href="./customer/login">HERE</a> To Login 
+		
+		<br> <br>
 		Click <a href="./customer/list">HERE</a> To List Customer
+
 	</h2>
 </body>
 </html>

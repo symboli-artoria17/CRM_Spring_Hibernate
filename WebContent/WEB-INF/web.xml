@@ -3,7 +3,6 @@
   <display-name>CRM_Spring_Hibernate</display-name>
   <welcome-file-list>
     <welcome-file>/WEB-INF/view/Welcome.jsp</welcome-file>
-    <welcome-file>index.htm</welcome-file>
   </welcome-file-list>
   
   <servlet>
@@ -20,4 +19,5 @@
     <servlet-name>dispatcher</servlet-name>
     <url-pattern>/</url-pattern>
   </servlet-mapping>
+  
 </web-app>
