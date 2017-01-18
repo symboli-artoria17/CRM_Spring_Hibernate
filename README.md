@@ -158,11 +158,18 @@
 
 	1. A login page.
 	2. New controller, new service, new DAO
-~~~	3. For here, the default home page is Welcome.jsp. And if you want to go ahead, you need to click 'login' link. Because in this case, the controller can bring you to the login page with a model(session). Thus we can add attributes...and validate the username and password. I still didn't find out another way to do that. The Idea situation is login page as the welcome page~~~
-
 	3. Login Page as the welcome page. Add the GetMapping("/") in the Login Controller and attach the Model(session) with it.
-
 	4. Error Page. Very simple web page with error message and a link back to login page.
+	5. Session Control. Use HttpSession to track if the user is login. In the controller, create a HttpSession by request.getSession() and setAttribute("uname",user.getUsername).
+	 	Then, in each webpage, if the username is == null, redirect the page to login page. (Make sure everyone login before go to other page)
+		By adding the code below in jsp pages:
+
+		<%
+		if(session.getAttribute("UName")==null){
+			response.sendRedirect("http://localhost:8080/CRM_Spring_Hibernate/");
+		}
+	  %>
+
 
 ## FAQ:
 **	Q: Cannot resolve 'javax servlet'... blah blah blah?**

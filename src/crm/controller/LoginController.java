@@ -1,5 +1,7 @@
 package crm.controller;
 
+import javax.servlet.http.HttpServletRequest;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -26,7 +28,10 @@ public class LoginController {
 	}
 	
 	@PostMapping("login")
-	public String validateLogin(@ModelAttribute("loginBean") User user){
+	public String validateLogin(HttpServletRequest request, @ModelAttribute("loginBean") User user){
+		
+		
+		request.getSession().setAttribute("UName",user.getUsername());
 		
 		return userService.isValid(user.getUsername(), user.getPassword())?"redirect:/customer/list":"LoginError";
 	}

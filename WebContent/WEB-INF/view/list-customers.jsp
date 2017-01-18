@@ -10,6 +10,13 @@
 	href="${pageContext.request.contextPath}/resources/css/style.css"></link>
 </head>
 <body>
+	
+	<%
+		if(session.getAttribute("UName")==null){
+			response.sendRedirect("http://localhost:8080/CRM_Spring_Hibernate/");
+		}
+	%>
+
 	<div id="wrapper">
 		<div id="header">
 			<h2>C.R.M.</h2>
