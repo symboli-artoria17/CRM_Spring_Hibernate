@@ -22,9 +22,7 @@ public class CustomerController {
 	
 	@Autowired
 	private CustomerService customerService;
-	
-	@Autowired
-	private UserService userService;
+
 	
 	@GetMapping("/list")
 	public String listCustomers(Model theModel){
@@ -78,17 +76,6 @@ public class CustomerController {
 		
 	}
 	
-	@GetMapping("/login")
-	public String getLoginPage(Model theModel){
-		User user = new User();
-		theModel.addAttribute("loginBean",user);
-		return "NewLogin";
-	}
 	
-	@PostMapping("/login")
-	public String validateLogin(@ModelAttribute("loginBean") User user){
-		
-		return userService.isValid(user.getUsername(), user.getPassword())?"redirect:/customer/list":"redirect:/login";
-	}
 	
 }

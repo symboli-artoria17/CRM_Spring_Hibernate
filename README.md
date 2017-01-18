@@ -154,6 +154,12 @@
 	2. Add code for "Delete" 
 		controller>service>DAO
 
+## 11. Login Function
+
+	1. A login page. 
+	2. New controller, new service, new DAO
+	3. For here, the default home page is Welcome.jsp. And if you want to go ahead, you need to click 'login' link. Because in this case, the controller can bring you to the login page with a model(session). Thus we can add attributes...and validate the username and password. I still didn't find out another way to do that. The Idea situation is login page as the welcome page. But we need to send a 
+	
 
 ## FAQ:
 **	Q: Cannot resolve 'javax servlet'... blah blah blah?**

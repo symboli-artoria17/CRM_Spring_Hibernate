@@ -22,7 +22,10 @@ public class UserDAOImpl implements UserDAO {
 		theQuery.setParameter("param1", arg1);
 		theQuery.setParameter("param2", arg2);
 		
-		return theQuery.getResultList().isEmpty()?true:false;
+		// For debug use
+		System.out.println(theQuery.getResultList().get(0));
+		
+		return theQuery.getResultList().isEmpty()?false:true;
 	}
 
 }
