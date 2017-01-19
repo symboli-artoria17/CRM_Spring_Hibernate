@@ -157,6 +157,10 @@
 ## 11. Login Function
 
 	1. A login page.
+			We have the signin.html from Bootstrap.doc.example
+			Make it JSP and Add the spring form taglib.
+			change the html <form> to <form:form> and add path="" in the <form:input> tag
+			Remember, all the attributes in <form:input> should contains "=" and the tag ends with "/". For example, <form:input path="username", autofocus="true"/>. In HTML form, things are different, it's <input autofocus>
 	2. New controller, new service, new DAO
 	3. Login Page as the welcome page. Add the GetMapping("/") in the Login Controller and attach the Model(session) with it.
 	4. Error Page. Very simple web page with error message and a link back to login page.
