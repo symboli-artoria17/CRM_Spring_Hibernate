@@ -24,7 +24,7 @@ public class LoginController {
 	public String getLoginPage(Model theModel){
 		User user = new User();
 		theModel.addAttribute("loginBean",user);
-		return "NewLogin";
+		return "Login2";
 	}
 	
 	@PostMapping("login")
