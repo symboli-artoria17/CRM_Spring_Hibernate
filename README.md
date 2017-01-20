@@ -174,6 +174,10 @@
 		}
 	  %>
 
+## 12. Database Configuration
+	Due to the failure of database on my localhost, I established another database on my old laptop. 
+	This is a chance to test the connection and configuration of accessing database remotely.
+	
 
 ## FAQ:
 **	Q: Cannot resolve 'javax servlet'... blah blah blah?**
@@ -188,7 +192,13 @@
 
 	A: I guess you need to check the scan-package in beans.xml. Is the class you want Spring to inject included in the packages to scan? Remember the scanning is recursive(scan in the packages and the packages in the package).
 
+**  Q: Timezone problem while initializing database connection (c3p0)?
 
+	A: specify a timezone in the jdbc url will work. 
+		1. Open your beans.xml (spring servlet configuration xml file OR application context xml file)
+		2. in the datasource bean, configure the jdbc property like this:
+			<property name="jdbcUrl"
+				value="jdbc:mysql://192.168.1.202:3306/web_customer_tracker?serverTimezone=UTC" />
 
 # Some useful resources
 
