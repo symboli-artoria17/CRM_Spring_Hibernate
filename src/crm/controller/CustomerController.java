@@ -33,7 +33,7 @@ public class CustomerController {
 		// add the customers to the model
 		theModel.addAttribute("customers",theCustomers);
 		
-		return "list-customers"; // Gotta create a page named "list-customers.jsp"
+		return "indexOverview"; // Gotta create a page named "list-customers.jsp"
 	}
 	
 	@GetMapping("/showFormForAdd")
