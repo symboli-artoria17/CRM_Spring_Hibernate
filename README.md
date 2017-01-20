@@ -178,6 +178,10 @@
 	Due to the failure of database on my localhost, I established another database on my old laptop. 
 	This is a chance to test the connection and configuration of accessing database remotely.
 	
+## 13. Update of list-customer page
+	Get a dashboard web page from bootstrap. you can find the page and bootstrap fiels in BootstrapResources folder. 
+	Edit the dashboard. Remove div s that are not necessary, rename everything, make it jsp, import the tag libs, login check, add login name display functions... Todo: logout function
+
 
 ## FAQ:
 **	Q: Cannot resolve 'javax servlet'... blah blah blah?**
